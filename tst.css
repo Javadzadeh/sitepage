@@ -1,0 +1,203 @@
+
+/* ریست کردن استایل‌ها */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* استایل عمومی */
+body {
+    font-family: 'Vazir', sans-serif;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+}
+
+/* هدر */
+.header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header .header-btn {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background-color: #fff;
+    color: #007bff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header .header-btn:hover {
+    background-color: #e0e0e0;
+    color: #0056b3;
+}
+
+/* طرح‌بندی کلی */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* منوی کناری */
+.sidebar {
+    flex: 1 1 15px;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+.sidebar-btn {
+    display: block;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #e0e0e0;
+}
+
+.menu-icon {
+    font-size: 1rem;
+    margin-left: 10px;
+    color: #007bff;
+    
+}
+
+.menu-text {
+    font-size: 1rem;
+    color: #333;
+    
+}
+
+/* محتوای اصلی */
+.content {
+    flex: 3 1 700px;
+    padding: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+/* استایل ریسپانسیو */
+@media (min-width: 1025px) {
+    body {
+        font-size: 16px;
+    }
+    .menu-text {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        height: auto;
+    }
+    body {
+        font-size: 10px;
+    }
+    .menu-text {
+        font-size: 0.5rem;
+    }
+}
+/* برای سایزهای موبایل */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 1rem;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        border-bottom: 1px solid #ddd;
+        font-size: 14px;
+    }
+
+    td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #333;
+        margin-right: 0.5rem;
+    }
+
+    td:nth-child(even) {
+        background-color: #f1f1f1;
+    }
+
+    td:last-child {
+        border-bottom: none;
+    }
+
+   .date-row{
+    background-color: lightblue;
+   }
+}
